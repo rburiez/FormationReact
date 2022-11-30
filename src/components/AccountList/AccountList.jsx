@@ -5,10 +5,14 @@ import { RowAccount } from '../RowAccount/RowAccount';
 export default function AccountList({accounts, etatsTri, handleAddSolde, handleSort, handleAddAccount, handleDetailAccount}) {
 
 
+    const handle = {
+        AddSolde: handleAddSolde,
+        DetailAccount: handleDetailAccount
+    };
     
     //Création des lignes du tableau
     const affichage = accounts.map(({id, name, solde, derniereOperation}) => {
-        return <RowAccount key={id} id={id} name={name} solde={solde} derniereOperation={derniereOperation} />
+        return <RowAccount key={id} id={id} name={name} solde={solde} derniereOperation={derniereOperation} handle={handle} />
     });
 
     //Retour de la structure complète

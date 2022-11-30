@@ -54,17 +54,17 @@ export default function App() {
   
   return (
     <div className="App">
-      <div>
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-      </div>
-      <Header finH1='les copains'>
+      </div> */}
+      {/* <Header finH1='les copains'>
         <h4>Ceci est une formation</h4>
-      </Header>
+      </Header> */}
 
       <h2>Etat des finances</h2>
       {!currentAccount ?
@@ -111,8 +111,8 @@ export default function App() {
         solde: 5000,
         derniereOperation : Date.parse("2021-01-25")
       }];
+ 
       setMyAccounts(newtab);
-
     } 
   }
 

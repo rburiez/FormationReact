@@ -1,0 +1,29 @@
+{
+  "accounts" :
+  [
+    {
+      "id":1,
+      "name": "Rémi",
+      "solde": 500,
+      "derniereOperation" : "2022-10-22"
+    },
+    {
+      "id":2,
+      "name": "Eliot",
+      "solde": 100,
+      "derniereOperation" : "2022-09-12"
+    },
+    {
+      "id":3,
+      "name": "Nedjma",
+      "solde": 150,
+      "derniereOperation" : "2022-11-02"
+    },
+    {
+      "id":4,
+      "name": "Laurent",
+      "solde": 1300,
+      "derniereOperation" : "2022-10-23"
+    }
+  ]
+}

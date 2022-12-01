@@ -5,6 +5,8 @@ import Header from './components/Header/Header'
 import AccountList from './components/AccountList/AccountList'
 import DetailAccount from './components/DetailAccount/DetailAccount'
 import { CompareString } from './divers'
+import Compteur from './components/Compteur/Compteur'
+import { useAccounts } from './hook'
 
 
 export default function App() {
@@ -25,32 +27,7 @@ export default function App() {
  ]);
 
   const [currentAccount, setDisplay] = useState(null);
-  const [myAccounts, setMyAccounts] = useState([
-    {
-      id:1,
-      name: "Rémi",
-      solde: 500,
-      derniereOperation : Date.parse("2022-10-22")
-    },
-    {
-      id:2,
-      name: "Eliot",
-      solde: 100,
-      derniereOperation : Date.parse("2022-09-12")
-    },
-    {
-      id:3,
-      name: "Nedjma",
-      solde: 150,
-      derniereOperation : Date.parse("2022-11-02")
-    },
-    {
-      id:4,
-      name: "Laurent",
-      solde: 1300,
-      derniereOperation : Date.parse("2022-10-23")
-    }
-  ]);
+  const [myAccounts, setMyAccounts] = useAccounts();
   
   return (
     <div className="App">
@@ -72,6 +49,8 @@ export default function App() {
         <DetailAccount account={currentAccount} handleRetour={DisplayTableau} />  
       }
       
+      <Compteur />
+
     </div> 
   )
 
